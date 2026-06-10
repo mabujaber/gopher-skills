@@ -1,0 +1,40 @@
+{
+  "name": "gopher-skills",
+  "owner": {
+    "name": "Moayad Abujaber",
+    "url": "https://github.com/mabujaber"
+  },
+  "metadata": {
+    "description": "Claude Code plugins and skills for the Go-native ecosystem — Temporal, Kubernetes, Terraform, Vault, and more",
+    "version": "0.1.0",
+    "homepage": "https://github.com/mabujaber/gopher-skills",
+    "pluginRoot": "./plugins",
+    "totalPlugins": 1,
+    "skillsEnabled": 1,
+    "lastUpdated": "2026-06-10"
+  },
+  "plugins": [
+    {
+      "name": "temporal-developer",
+      "source": "./plugins/workflows/temporal-developer",
+      "description": "Develop, debug, and manage Temporal workflows across Python, TypeScript, Go, and Java. Covers durable execution, non-determinism, signals, queries, versioning, and AI/LLM patterns.",
+      "version": "1.0.0",
+      "category": "workflows",
+      "keywords": [
+        "temporal",
+        "workflows",
+        "durable-execution",
+        "distributed-systems",
+        "go-ecosystem",
+        "python",
+        "typescript",
+        "go",
+        "java"
+      ],
+      "author": {
+        "name": "Temporal Technologies, Inc.",
+        "url": "https://temporal.io"
+      }
+    }
+  ]
+}

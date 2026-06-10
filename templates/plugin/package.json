@@ -1,0 +1,7 @@
+{
+  "name": "plugin-name",
+  "version": "1.0.0",
+  "description": "Short description",
+  "license": "MIT",
+  "keywords": ["go-ecosystem"]
+}

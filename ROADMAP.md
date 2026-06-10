@@ -2,11 +2,17 @@
 
 Planned plugins for gopher-skills, organized by domain.
 
+## Go Language Development
+
+| Plugin | Description | Contents |
+|--------|-------------|----------|
+| `golang-pro` | Idiomatic Go development — patterns, TDD, concurrency, gRPC, browser automation, DBOS | 7 skills · 3 agents · 3 commands |
+
 ## Workflows
 
 | Plugin | Tool | Description | SDKs |
 |--------|------|-------------|------|
-| `temporal-developer` | [Temporal](https://temporal.io) | Durable execution platform | Python, TypeScript, Go, Java |
+| `temporal-developer` ✅ | [Temporal](https://temporal.io) | Durable execution platform | Python, TypeScript, Go, Java |
 
 ## Infrastructure & Kubernetes
 

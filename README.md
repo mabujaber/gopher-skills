@@ -10,6 +10,7 @@ Claude Code plugins and skills for the **Go-native ecosystem** — tools built w
 | Plugin | Category | Languages | Status |
 |--------|----------|-----------|--------|
 | [temporal-developer](plugins/workflows/temporal-developer/) | workflows | Python, TypeScript, Go, Java | ✅ Available |
+| [golang-pro](plugins/golang-pro/) | language | Go | ✅ Available |
 
 ## Roadmap
 
@@ -19,6 +20,8 @@ See [ROADMAP.md](ROADMAP.md) for the full list of planned plugins.
 
 ```
 plugins/
+  language/           Go language development — idiomatic patterns, testing, concurrency
+    golang-pro/
   workflows/          Durable execution & application-layer orchestration
     temporal-developer/
   infrastructure/     Kubernetes-native & platform tooling

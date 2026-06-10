@@ -24,6 +24,15 @@ This plugin provides the `temporal-developer` skill. Use it when:
 - Go
 - Java
 
+## Attribution
+
+Ported from the [temporal-developer Codex plugin](https://github.com/openai/plugins/tree/main/plugins/temporal)
+originally published by [Temporal Technologies, Inc.](https://temporal.io) in the
+[openai/plugins](https://github.com/openai/plugins) repository.
+
+Adapted for Claude Code: added `plugin.json`, Claude-compatible `SKILL.md` frontmatter,
+and slash command entry point. All reference documentation is unchanged from the original.
+
 ## License
 
-Apache-2.0 — Ported from the [Temporal temporal-developer Codex skill](https://github.com/openai/plugins/tree/main/plugins/temporal).
+MIT — Copyright (c) 2026 Temporal Technologies Inc.

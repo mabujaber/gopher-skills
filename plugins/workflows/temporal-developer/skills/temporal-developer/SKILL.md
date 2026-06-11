@@ -2,7 +2,7 @@
 name: temporal-developer
 description: >
   Use when building, debugging, or managing Temporal applications across Python, TypeScript, Go, or Java — including workflows, activities, workers, non-determinism errors, stuck workflows, activity retries, Temporal CLI/Server/Cloud, or durable execution concepts such as signals, queries, heartbeats, versioning, continue-as-new, child workflows, or saga patterns.
-allowed-tools: Read, Write, Edit, Grep, Glob, Bash(temporal:*)
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(temporal:*), Bash(brew install temporal)
 version: 1.0.0
 license: MIT
 tags:

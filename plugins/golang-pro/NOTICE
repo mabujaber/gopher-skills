@@ -9,7 +9,9 @@ Copyright (c) 2026 Affaan Mustafa
 
 Files derived from this source:
   skills/golang-patterns/SKILL.md
+  skills/golang-patterns/references/details.md
   skills/golang-testing/SKILL.md
+  skills/golang-testing/references/details.md
   agents/go-reviewer.md
   agents/go-build-resolver.md
   commands/go-build.md
@@ -24,9 +26,14 @@ Copyright (c) 2026 Antigravity User
 
 Files derived from this source:
   skills/grpc-golang/SKILL.md
+  skills/grpc-golang/resources/implementation-playbook.md
   skills/go-playwright/SKILL.md
+  skills/go-playwright/resources/implementation-playbook.md
   skills/go-rod-master/SKILL.md
+  skills/go-rod-master/references/api-reference.md
+  skills/go-rod-master/examples/*.go
   skills/dbos-golang/SKILL.md
+  skills/dbos-golang/references/*.md
 
 ---
 
@@ -36,6 +43,7 @@ Copyright (c) 2024 Seth Hobson
 
 Files derived from this source:
   skills/go-concurrency-patterns/SKILL.md
+  skills/go-concurrency-patterns/references/details.md
   agents/golang-pro.md
 
 ---

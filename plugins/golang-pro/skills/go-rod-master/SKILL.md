@@ -12,7 +12,7 @@ date_added: "2026-02-27"
 
 [Rod](https://github.com/go-rod/rod) is a high-level Go driver built directly on the [Chrome DevTools Protocol](https://chromedevtools.github.io/devtools-protocol/) for browser automation and web scraping. Unlike wrappers around other tools, Rod communicates with the browser natively via CDP, providing thread-safe operations, chained context design for timeouts/cancellation, auto-wait for elements, correct iframe/shadow DOM handling, and zero zombie browser processes.
 
-The companion library [go-rod/stealth](https://github.com/go-rod/stealth) injects anti-bot-detection evasions based on [puppeteer-extra stealth](https://github.com/nichochar/puppeteer-extra/tree/master/packages/extract-stealth-evasions), hiding headless browser fingerprints from detection systems.
+The companion library [go-rod/stealth](https://github.com/go-rod/stealth) injects anti-bot-detection evasions based on [puppeteer-extra stealth](https://github.com/berstend/puppeteer-extra/tree/master/packages/extract-stealth-evasions), hiding headless browser fingerprints from detection systems.
 
 ## When to Use This Skill
 
@@ -46,7 +46,7 @@ go get github.com/go-rod/stealth@latest
 Rod auto-downloads a compatible Chromium binary on first run. To pre-download:
 
 ```bash
-go run github.com/nichochar/go-rod.github.io/cmd/launcher@latest
+go run github.com/go-rod/rod/lib/utils/get-browser@latest
 ```
 
 ## Core Concepts
@@ -539,7 +539,7 @@ See the `examples/` directory for complete, runnable Go files:
 - [Go API Reference](https://pkg.go.dev/github.com/go-rod/rod) — Complete type and method documentation
 - [go-rod/stealth](https://github.com/go-rod/stealth) — Anti-bot detection plugin
 - [Examples (source)](https://github.com/go-rod/rod/blob/main/examples_test.go) — Official example tests
-- [Rod vs Chromedp Comparison](https://github.com/nichochar/go-rod.github.io/blob/main/lib/examples/compare-chromedp) — Migration reference
+- [Rod vs Chromedp Comparison](https://github.com/go-rod/rod/tree/main/lib/examples/compare-chromedp) — Migration reference
 - [Chrome DevTools Protocol Docs](https://chromedevtools.github.io/devtools-protocol/) — Underlying protocol reference
 - [Chrome CLI Flags Reference](https://peter.sh/experiments/chromium-command-line-switches) — Launcher flag documentation
 - `references/api-reference.md` — Quick-reference cheat sheet

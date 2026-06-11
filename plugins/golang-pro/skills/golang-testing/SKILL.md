@@ -182,3 +182,7 @@ func TestHandler(t *testing.T) {
 - Ignore flaky tests
 - Mock everything
 - Skip error paths in tests
+
+## Detailed Reference
+
+Complete worked examples (step-by-step TDD, golden files, interface mocking, parallel subtests, benchmarks, fuzzing, coverage workflows) live in `references/details.md`. Read that file when writing the actual tests.

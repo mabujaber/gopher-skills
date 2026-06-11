@@ -1,6 +1,17 @@
 ---
 name: go-concurrency-patterns
-description: Master Go concurrency with goroutines, channels, sync primitives, and context. Use when building concurrent Go applications, implementing worker pools, or debugging race conditions.
+description: >
+  Use when building concurrent Go applications, implementing worker pools, or debugging race conditions, deadlocks, goroutine leaks, channel patterns, sync.WaitGroup, errgroup, context cancellation, or -race detector failures.
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(go:*)
+version: 1.0.0
+license: MIT
+tags:
+  - go-ecosystem
+  - golang
+  - concurrency
+  - goroutines
+  - channels
+compatibility: Designed for Claude Code.
 ---
 
 # Go Concurrency Patterns

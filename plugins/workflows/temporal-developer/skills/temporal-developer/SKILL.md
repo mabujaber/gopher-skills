@@ -1,15 +1,12 @@
 ---
 name: temporal-developer
 description: >
-  Develop, debug, and manage Temporal applications across Python, TypeScript, Go, and Java.
-  Use when building workflows, activities, or workers with a Temporal SDK, debugging issues
-  like non-determinism errors, stuck workflows, or activity retries, using Temporal CLI,
-  Temporal Server, or Temporal Cloud, or working with durable execution concepts like
-  signals, queries, heartbeats, versioning, continue-as-new, child workflows, or saga patterns.
-allowed-tools: Read, Write, Edit, Grep, Glob, Bash(temporal:*), Bash(brew install temporal)
+  Use when building, debugging, or managing Temporal applications across Python, TypeScript, Go, or Java — including workflows, activities, workers, non-determinism errors, stuck workflows, activity retries, Temporal CLI/Server/Cloud, or durable execution concepts such as signals, queries, heartbeats, versioning, continue-as-new, child workflows, or saga patterns.
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(temporal:*)
 version: 1.0.0
-license: Apache-2.0
+license: MIT
 tags:
+  - go-ecosystem
   - temporal
   - workflows
   - durable-execution
@@ -18,7 +15,7 @@ tags:
   - typescript
   - go
   - java
-compatibility: Designed for Claude Code. Ported from the Temporal temporal-developer Codex skill.
+compatibility: Designed for Claude Code.
 ---
 
 # Skill: temporal-developer

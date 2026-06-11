@@ -1,9 +1,16 @@
 ---
 name: dbos-golang
-description: "Guide for building reliable, fault-tolerant Go applications with DBOS durable workflows. Use when adding DBOS to existing Go code, creating workflows and steps, or using queues for concurrency control."
-risk: safe
-source: "https://docs.dbos.dev/"
-date_added: "2026-02-27"
+description: >
+  Use when adding DBOS to existing Go code, creating workflows and steps, using queues for concurrency control, implementing workflow communication (events, messages, streams), configuring and launching DBOS applications, using the DBOS Client from external apps, or testing DBOS applications.
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(go:*)
+version: 1.0.0
+license: MIT
+tags:
+  - go-ecosystem
+  - golang
+  - dbos
+  - durable-workflows
+compatibility: Designed for Claude Code.
 ---
 
 # DBOS Go Best Practices
@@ -120,12 +127,9 @@ references/workflow-determinism.md
 references/queue-concurrency.md
 ```
 
+The full rule set in references/ covers lifecycle, workflows, steps, queues, communication (events, messages, streaming), patterns (idempotency, debouncing, scheduled), testing, and client operations — read the file matching the task.
+
 ## References
 
 - https://docs.dbos.dev/
 - https://github.com/dbos-inc/dbos-transact-golang
-
-## Limitations
-- Use this skill only when the task clearly matches the scope described above.
-- Do not treat the output as a substitute for environment-specific validation, testing, or expert review.
-- Stop and ask for clarification if required inputs, permissions, safety boundaries, or success criteria are missing.

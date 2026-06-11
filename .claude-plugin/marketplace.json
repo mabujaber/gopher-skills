@@ -10,8 +10,8 @@
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
     "totalPlugins": 2,
-    "skillsEnabled": 7,
-    "lastUpdated": "2026-06-10"
+    "skillsEnabled": 8,
+    "lastUpdated": "2026-06-11"
   },
   "plugins": [
     {
@@ -39,7 +39,7 @@
   ,
     {
       "name": "golang-pro",
-      "source": "./plugins/golang-pro",
+      "source": "./plugins/languages/golang-pro",
       "description": "Go language development skills, agents, and commands. Covers idiomatic patterns, TDD, concurrency, gRPC, browser automation (Playwright, go-rod), and DBOS durable workflows.",
       "version": "1.0.0",
       "category": "language",

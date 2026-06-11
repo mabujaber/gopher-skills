@@ -5,7 +5,7 @@ Build, debug, and manage Temporal applications across Python, TypeScript, Go, an
 ## Installation
 
 ```bash
-/plugin install temporal-developer@claude-code-plugins-plus
+/plugin install temporal-developer@gopher-skills
 ```
 
 ## Usage

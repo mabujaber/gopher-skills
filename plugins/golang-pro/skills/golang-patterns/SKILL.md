@@ -87,3 +87,7 @@ Essential commands: `go build`, `go test`, `go vet`, `staticcheck`, `golangci-li
 - Using `panic` for control flow
 - Passing context in struct (use as first parameter instead)
 - Mixing value and pointer receivers on the same type
+
+## Detailed Reference
+
+Full code examples for every pattern above (error wrapping, worker pools, functional options, interface design, memory optimization, linter config) live in `references/details.md`. Read that file when implementing a pattern rather than just naming it.

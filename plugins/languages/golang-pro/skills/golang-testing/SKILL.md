@@ -1,7 +1,20 @@
 ---
 name: golang-testing
-description: Go testing patterns including table-driven tests, subtests, benchmarks, fuzzing, and test coverage. Follows TDD methodology with idiomatic Go practices.
-origin: ECC
+description: >
+  Use when writing Go tests, adding coverage to existing code, benchmarking,
+  fuzzing, debugging flaky tests, or -race failures — table-driven tests,
+  subtests, golden files, httptest, mocks.
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(go:*)
+version: 1.0.0
+license: MIT
+tags:
+  - go-ecosystem
+  - golang
+  - testing
+  - tdd
+  - benchmarks
+  - fuzzing
+compatibility: Designed for Claude Code.
 ---
 
 # Go Testing Patterns
@@ -57,7 +70,6 @@ func TestAdd(t *testing.T) {
 ```go
 func TestSomething(t *testing.T) {
     for _, tt := range tests {
-        tt := tt // capture loop variable
         t.Run(tt.name, func(t *testing.T) {
             t.Parallel()
             // test body
@@ -65,6 +77,8 @@ func TestSomething(t *testing.T) {
     }
 }
 ```
+
+> Go <=1.21 only: add `tt := tt` inside the loop to capture the variable before `t.Parallel()`.
 
 ## Test Helpers
 

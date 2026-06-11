@@ -2,7 +2,7 @@
   "name": "temporal-developer",
   "version": "1.0.0",
   "description": "Develop, debug, and manage Temporal workflows across Python, TypeScript, Go, and Java",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "keywords": [
     "temporal",
     "workflows",
@@ -10,6 +10,6 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/temporalio/skill-temporal-developer"
+    "url": "https://github.com/mabujaber/gopher-skills"
   }
 }

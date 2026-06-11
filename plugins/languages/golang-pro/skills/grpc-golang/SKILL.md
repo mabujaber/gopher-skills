@@ -1,9 +1,20 @@
 ---
 name: grpc-golang
-description: "Build production-ready gRPC services in Go with mTLS, streaming, and observability. Use when designing Protobuf contracts with Buf or implementing secure service-to-service transport."
-risk: safe
-source: self
-date_added: "2026-02-27"
+description: >
+  Use when designing Protobuf contracts with Buf, implementing gRPC services in Go,
+  configuring mTLS for service-to-service transport, building unary or streaming RPC
+  handlers, troubleshooting buf lint / buf generate / grpcurl errors, or adding
+  OpenTelemetry interceptors to a gRPC-Go service.
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(go:*), Bash(buf:*), Bash(grpcurl:*), Bash(protoc:*)
+version: 1.0.0
+license: MIT
+tags:
+  - go-ecosystem
+  - golang
+  - grpc
+  - protobuf
+  - buf
+compatibility: Designed for Claude Code.
 ---
 
 # gRPC Golang (gRPC-Go)
@@ -98,7 +109,4 @@ message GetUserResponse {
 
 ## Related Skills
 
-- @golang-pro - General Go patterns and performance optimization outside the gRPC layer.
-- @go-concurrency-patterns - Advanced goroutine lifecycle management for streaming handlers.
-- @api-design-principles - Resource naming and versioning strategy before writing `.proto` files.
-- @docker-expert - Containerizing gRPC services and configuring TLS cert injection via Docker secrets.
+Related skills in this plugin: golang-patterns (idiomatic Go patterns and performance optimization outside the gRPC layer), go-concurrency-patterns (goroutine lifecycle management for streaming handlers).

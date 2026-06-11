@@ -1,0 +1,22 @@
+{
+  "name": "golang-pro",
+  "version": "1.0.0",
+  "description": "Go language development skills, agents, and commands — idiomatic patterns, TDD, concurrency, gRPC, browser automation, and DBOS durable workflows",
+  "license": "MIT",
+  "keywords": [
+    "golang",
+    "go",
+    "concurrency",
+    "grpc",
+    "testing",
+    "tdd",
+    "browser-automation",
+    "dbos",
+    "go-ecosystem"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mabujaber/gopher-skills"
+  },
+  "author": "Moayad Abujaber"
+}

@@ -202,7 +202,6 @@ func TestParallel(t *testing.T) {
     }
 
     for _, tt := range tests {
-        tt := tt // Capture range variable
         t.Run(tt.name, func(t *testing.T) {
             t.Parallel() // Run subtests in parallel
             result := Process(tt.input)
@@ -212,6 +211,8 @@ func TestParallel(t *testing.T) {
     }
 }
 ```
+
+> Go <=1.21 only: add `tt := tt` inside the loop to capture the variable before `t.Parallel()`.
 
 ## Test Helpers
 

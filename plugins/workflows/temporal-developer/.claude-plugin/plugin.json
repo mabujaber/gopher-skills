@@ -6,8 +6,8 @@
     "name": "Temporal Technologies, Inc.",
     "url": "https://temporal.io"
   },
-  "repository": "https://github.com/temporalio/skill-temporal-developer",
-  "license": "Apache-2.0",
+  "repository": "https://github.com/mabujaber/gopher-skills",
+  "license": "MIT",
   "keywords": [
     "temporal",
     "workflows",

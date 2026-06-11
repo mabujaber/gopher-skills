@@ -28,6 +28,7 @@ plugins/
 
 | Domain | Path | Tools |
 |--------|------|-------|
+| Languages | `plugins/languages/` | golang-pro |
 | Workflows | `plugins/workflows/` | Temporal |
 | Infrastructure | `plugins/infrastructure/` | Argo Workflows |
 | Identity | `plugins/identity/` | `ory/` (Kratos, Hydra, Keto, Oathkeeper), OpenFGA, Zitadel |

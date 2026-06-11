@@ -1,7 +1,16 @@
 ---
 name: golang-patterns
-description: Idiomatic Go patterns, best practices, and conventions for building robust, efficient, and maintainable Go applications.
-origin: ECC
+description: >
+  Use when writing, reviewing, or refactoring Go code and idiomatic patterns are needed — error wrapping with %w, errors.Is/errors.As, interface design, package layout, functional options, sync.Pool, strings.Builder, golangci-lint setup, anti-patterns (panic for control flow, naked returns, mixed receivers).
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(go:*), Bash(gofmt:*), Bash(golangci-lint:*)
+version: 1.0.0
+license: MIT
+tags:
+  - go-ecosystem
+  - golang
+  - idioms
+  - patterns
+compatibility: Designed for Claude Code.
 ---
 
 # Go Development Patterns
@@ -35,11 +44,7 @@ Functions should accept interface parameters and return concrete types.
 
 ## Concurrency Patterns
 
-- Worker Pool (WaitGroup-based)
-- Context for Cancellation and Timeouts
-- Graceful Shutdown (OS signal listening)
-- `errgroup` for Coordinated Goroutines
-- Avoiding Goroutine Leaks (buffered channels + select on ctx.Done)
+Concurrency patterns (worker pools, errgroup, graceful shutdown, leak avoidance) are covered in depth by the go-concurrency-patterns skill; this skill's references/details.md also carries the code examples.
 
 ## Interface Design
 

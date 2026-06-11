@@ -1,9 +1,17 @@
 ---
 name: go-playwright
-description: "Expert capability for robust, stealthy, and efficient browser automation using Playwright Go."
-risk: safe
-source: "https://github.com/playwright-community/playwright-go"
-date_added: "2026-02-27"
+description: >
+  Use when automating browsers, scraping, or testing web apps with playwright-go, or when the project imports github.com/playwright-community/playwright-go, or when anti-bot evasion (Cloudflare, Akamai), session reuse, or network interception are required. For go-rod/CDP projects use the go-rod-master skill instead.
+allowed-tools: Read, Write, Edit, Grep, Glob, Bash(go:*)
+version: 1.0.0
+license: MIT
+tags:
+  - go-ecosystem
+  - golang
+  - playwright
+  - browser-automation
+  - scraping
+compatibility: Designed for Claude Code.
 ---
 
 # Playwright Go Automation Expert
@@ -18,7 +26,6 @@ This skill provides a comprehensive framework for writing high-performance, prod
 - Use when debugging existing Playwright scripts.
 
 ## Safety & Risk
-**Risk Level: 🔵 Safe**
 
 - **Sandboxed Execution:** Browser contexts are isolated; they do not persist data to the host machine unless explicitly saved.
 - **Resource Management:** Designed to close browsers and contexts via `defer` to prevent memory leaks.
@@ -52,19 +59,23 @@ This skill provides a comprehensive framework for writing high-performance, prod
 - **Timeouts:** Never rely on default timeouts. Set explicit timeouts (e.g., `playwright.PageClickOptions{Timeout: playwright.Float(5000)}`).
 
 ### 4. Stealth & Human-Like Behavior
-To bypass anti-bot systems (Cloudflare, Akamai), the generated code must **imitate human physiology**:
+Apply stealth and human-emulation techniques **only when scraping bot-protected third-party sites** (Cloudflare, Akamai, etc.). Do NOT apply them for E2E tests against your own application — they slow tests and add flakiness with no benefit.
+
+**For anti-bot scraping (third-party sites):**
 - **Non-Linear Mouse Movement:** Never teleport the mouse. Implement a helper that moves the mouse along a Bezier curve with random jitter.
-- **Input Latency:** never use `Fill()`. Use `Type()` with random delays between keystrokes (50ms–200ms).
+- **Input Latency:** Use `Type()` (not `Fill()`) with random delays between keystrokes (50ms–200ms) via a `HumanType` helper.
 - **Viewport Randomization:** Randomize the viewport size slightly (e.g., 1920x1080 ± 15px) to avoid fingerprinting.
 - **Behavioral Noise:** Randomly scroll, focus/unfocus the window, or hover over irrelevant elements ("idling") during long waits.
 - **User-Agent:** Rotate User-Agents for every new Context.
 
+**For E2E tests against your own app:**
+- Use `Fill()` at normal speed — it is faster, more reliable, and correct.
+- No random delays, no stealth scripts, no User-Agent rotation.
+- Reserve `HumanType` and evasion helpers exclusively for scraping tasks.
+
 ### 5. Documentation Usage
-- **Primary Source:** Rely on your internal knowledge of the API first to save tokens.
-- **Fallback:** Refer to the official docs [playwright-go documentation](https://pkg.go.dev/github.com/playwright-community/playwright-go#section-documentation) ONLY if:
-  - You encounter an unknown error.
-  - You need to implement complex network interception or authentication flows.
-  - The API has changed significantly.
+- **Primary Source:** Consult `resources/implementation-playbook.md` for working code patterns before writing from memory.
+- **Reference:** Refer to the official docs [playwright-go documentation](https://pkg.go.dev/github.com/playwright-community/playwright-go#section-documentation) for unknown errors, complex network interception, or authentication flows.
 
 ## Resources
 - `resources/implementation-playbook.md` for detailed code examples and implementation patterns.

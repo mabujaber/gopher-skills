@@ -535,7 +535,63 @@ func selectPatterns() {
 }
 ```
 
-## Race Detection
+### Pattern 8: Lock-Free Counters with sync/atomic
+
+For simple shared counters or flags, `sync/atomic` is faster and simpler than a
+mutex. Prefer the `atomic.Int64`/`atomic.Bool` types (Go 1.19+) over the bare
+`atomic.AddInt64`-style functions — they make the atomic intent part of the type.
+
+```go
+type Metrics struct {
+    requests atomic.Int64
+    failures atomic.Int64
+    closed   atomic.Bool
+}
+
+func (m *Metrics) Record(ok bool) {
+    m.requests.Add(1)
+    if !ok {
+        m.failures.Add(1)
+    }
+}
+
+func (m *Metrics) Snapshot() (total, failed int64) {
+    return m.requests.Load(), m.failures.Load()
+}
+
+// Compare-and-swap for one-shot transitions
+func (m *Metrics) Close() bool {
+    return m.closed.CompareAndSwap(false, true) // true only for the first caller
+}
+```
+
+Use atomics only for independent scalar values. If you need to keep two fields
+consistent with each other, use a `sync.Mutex` — atomics cannot make a multi-field
+update atomic as a group.
+
+### Pattern 9: One-Time Initialization with sync.Once
+
+`sync.Once` guarantees a function runs exactly once, even under concurrent access —
+the idiomatic way to build lazy singletons without a race.
+
+```go
+var (
+    once     sync.Once
+    instance *Client
+)
+
+func GetClient() *Client {
+    once.Do(func() {
+        instance = newClient() // runs exactly once; other callers block until done
+    })
+    return instance
+}
+```
+
+For initialization that can fail and should be retried, use `sync.OnceValue` /
+`sync.OnceValues` (Go 1.21+) instead of hand-rolling the pattern.
+
+## Race Detection and Debugging
 
 ```bash
 # Run tests with race detector
@@ -547,3 +603,41 @@ go build -race .
 # Run with race detector
 go run -race main.go
 ```
+
+### Reading race detector output
+
+A race report names two conflicting accesses and the goroutines that made them.
+Read it top-down:
+
+```
+WARNING: DATA RACE
+Write at 0x00c0000b4010 by goroutine 7:      <- the racing write, with stack
+  main.(*Counter).Inc()  counter.go:12
+Previous read at 0x00c0000b4010 by main goroutine:   <- the conflicting access
+  main.main()            main.go:20
+Goroutine 7 (running) created at:            <- where the racing goroutine started
+  main.main()            main.go:18
+```
+
+1. The two memory addresses match — it is the *same* variable accessed without
+   synchronization.
+2. Fix at the variable, not the symptom: guard every access with the *same*
+   `sync.Mutex`, switch the field to a `sync/atomic` type, or stop sharing the
+   value (pass a copy / use a channel to hand off ownership).
+3. Re-run with `-race` until clean. The detector only flags races it actually
+   observes, so exercise the concurrent path under load.
+
+### Debugging flaky / intermittent races
+
+```bash
+# Stress a single test to surface low-probability races
+go test -race -run TestConcurrent -count=100 ./...
+
+# Combine with the scheduler-shuffling and CPU pressure
+GOMAXPROCS=8 go test -race -count=50 ./...
+```
+
+Common root causes: a loop variable captured by reference in a closure (pre-Go
+1.22), forgetting `mu.Lock()` on one read path, reusing a `sync.WaitGroup` before
+all `Done()` calls complete, or sharing a map across goroutines without a lock
+(use `sync.Map` or a mutex — see Pattern 6).

@@ -673,6 +673,59 @@ go test -fuzz=FuzzParse -fuzztime=30s ./...
 go test -count=10 ./...
 ```
 
+## Debugging Data Races and Flaky Tests
+
+Flaky tests almost always come from one of: a data race, a timing assumption
+(`time.Sleep`), shared state leaking between tests, or reliance on map iteration
+order. Reproduce first, then fix the root cause — never just retry.
+
+### Surface the race
+
+```bash
+# Stress a suspected-flaky test under the race detector
+go test -race -run TestConcurrent -count=100 ./...
+
+# Disable the test cache so every run actually executes
+go test -race -count=1 ./...
+```
+
+`-race` instruments memory access and fails the test if two goroutines touch the
+same address without synchronization. A report names both accesses and the
+goroutines involved:
+
+```
+WARNING: DATA RACE
+Write at 0x00c000128010 by goroutine 8:
+  pkg.(*Cache).Set()   cache.go:21
+Previous read at 0x00c000128010 by goroutine 7:
+  pkg.(*Cache).Get()   cache.go:14
+```
+
+The two addresses match — it is the same variable. Fix it at the source: guard
+every access with the *same* mutex, switch the field to a `sync/atomic` type, or
+hand the value off through a channel instead of sharing it. Then re-run with
+`-race` until clean.
+
+### Common flaky-test causes and fixes
+
+| Symptom | Root cause | Fix |
+|---------|-----------|-----|
+| Passes alone, fails in package run | Shared global / package-level state | Reset state in `t.Cleanup`; avoid mutable globals |
+| Passes locally, fails in CI | Timing via `time.Sleep` | Synchronize on a channel, `sync.WaitGroup`, or `assert.Eventually` |
+| Random map-order assertion failures | Comparing map iteration order | Sort keys, or compare with `reflect.DeepEqual` / `maps.Equal` |
+| `-race` only fails under `-count=N` | Genuine data race | Add synchronization (see above) |
+| Goroutine leak across tests | Missing `cancel()` / unclosed channel | `defer cancel()`; assert with `goleak.VerifyNone(t)` |
+
+### Detect goroutine leaks in tests
+
+```go
+import "go.uber.org/goleak"
+
+func TestMain(m *testing.M) {
+    goleak.VerifyTestMain(m) // fails the suite if any goroutine outlives the tests
+}
+```
+
 ## Best Practices
 
 **DO:**

@@ -95,16 +95,52 @@ func HumanClick(page playwright.Page, selector string) {
 
 ### Session Management (Save/Load Cookies)
 
+`BrowserContext.Cookies()` returns `[]playwright.Cookie`, while `AddCookies` expects
+`[]playwright.OptionalCookie`. Use the `Cookie.ToOptionalCookie()` helper to convert
+on the way back in — this keeps the round-trip correct across playwright-go versions.
+
 ```go
-func SaveSession(context playwright.BrowserContext, filepath string) {
-    // cookies, _ := context.Cookies()
-    // Serialize cookies to JSON and write to 'filepath'
-    // Implementation left to user: json.Marshal(cookies) -> os.WriteFile
+import (
+    "encoding/json"
+    "fmt"
+    "os"
+
+    "github.com/playwright-community/playwright-go"
+)
+
+// SaveSession serializes the context's cookies to a JSON file (mode 0600).
+func SaveSession(context playwright.BrowserContext, filepath string) error {
+    cookies, err := context.Cookies()
+    if err != nil {
+        return fmt.Errorf("read cookies: %w", err)
+    }
+    data, err := json.MarshalIndent(cookies, "", "  ")
+    if err != nil {
+        return fmt.Errorf("marshal cookies: %w", err)
+    }
+    if err := os.WriteFile(filepath, data, 0o600); err != nil {
+        return fmt.Errorf("write session file: %w", err)
+    }
+    return nil
 }
 
-func LoadSession(context playwright.BrowserContext, filepath string) {
-    // Read JSON from 'filepath' and deserialize
-    // var cookies []playwright.Cookie
-    // context.AddCookies(cookies)
+// LoadSession reads cookies from a JSON file and injects them into the context.
+func LoadSession(context playwright.BrowserContext, filepath string) error {
+    data, err := os.ReadFile(filepath)
+    if err != nil {
+        return fmt.Errorf("read session file: %w", err)
+    }
+    var cookies []playwright.Cookie
+    if err := json.Unmarshal(data, &cookies); err != nil {
+        return fmt.Errorf("unmarshal cookies: %w", err)
+    }
+    optional := make([]playwright.OptionalCookie, 0, len(cookies))
+    for _, c := range cookies {
+        optional = append(optional, c.ToOptionalCookie())
+    }
+    if err := context.AddCookies(optional); err != nil {
+        return fmt.Errorf("add cookies: %w", err)
+    }
+    return nil
 }
 ```

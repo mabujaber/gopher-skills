@@ -75,6 +75,12 @@ Planned plugins for gopher-skills, organized by domain.
 |--------|------|-------------|------|
 | `flipt` | [Flipt](https://flipt.io) | Self-hosted feature flag platform | Go, Python, JS, Ruby, Java, .NET, REST |
 
+## Storage & Object Stores
+
+| Plugin | Tool | Description | SDKs |
+|--------|------|-------------|------|
+| `seaweedfs` | [SeaweedFS](https://github.com/seaweedfs/seaweedfs) | Distributed object/blob store & filer; billions of files with O(1) disk access | S3 API, REST/HTTP, FUSE, HDFS, WebDAV, gRPC (Go) |
+
 ## Status Legend
 
 | Status | Meaning |
@@ -97,3 +103,4 @@ Planned plugins for gopher-skills, organized by domain.
 10. **Caddy** — complements Traefik
 11. **Ory/Hydra, Keto, Oathkeeper** — after Kratos lands
 12. **Argo Workflows** — K8s-native container orchestration (infrastructure category)
+13. **SeaweedFS** — Go-native distributed storage; new Storage domain, S3-compatible surface

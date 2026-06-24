@@ -46,7 +46,7 @@ Comprehensive guide for designing and implementing production-grade gRPC service
 5. **Observability**: Configure interceptors for tracing, metrics, and structured logging.
 6. **Verification**: Always run `buf lint` and breaking change checks before finalizing code generation.
 
-Refer to `resources/implementation-playbook.md` for detailed patterns, code examples, and anti-patterns.
+Refer to `references/implementation-playbook.md` for detailed patterns, code examples, and anti-patterns.
 
 ## Examples
 
@@ -101,7 +101,7 @@ message GetUserResponse {
 
 ## Resources
 
-- `resources/implementation-playbook.md` for detailed patterns, code examples, and anti-patterns.
+- `references/implementation-playbook.md` for detailed patterns, code examples, and anti-patterns.
 - [Google API Design Guide](https://cloud.google.com/apis/design)
 - [Buf Docs](https://buf.build/docs)
 - [gRPC-Go Docs](https://grpc.io/docs/languages/go/)

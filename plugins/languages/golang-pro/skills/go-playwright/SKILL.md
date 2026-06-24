@@ -74,11 +74,11 @@ Apply stealth and human-emulation techniques **only when scraping bot-protected 
 - Reserve `HumanType` and evasion helpers exclusively for scraping tasks.
 
 ### 5. Documentation Usage
-- **Primary Source:** Consult `resources/implementation-playbook.md` for working code patterns before writing from memory.
+- **Primary Source:** Consult `references/implementation-playbook.md` for working code patterns before writing from memory.
 - **Reference:** Refer to the official docs [playwright-go documentation](https://pkg.go.dev/github.com/playwright-community/playwright-go#section-documentation) for unknown errors, complex network interception, or authentication flows.
 
 ## Resources
-- `resources/implementation-playbook.md` for detailed code examples and implementation patterns.
+- `references/implementation-playbook.md` for detailed code examples and implementation patterns.
 
 ### Summary Checklist for Agent
  - Is Debug Mode on? -> `Headless=false`, `SlowMo=100+`.

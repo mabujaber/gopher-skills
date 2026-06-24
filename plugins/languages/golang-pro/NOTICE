@@ -16,7 +16,7 @@ Files derived from this source:
   agents/go-build-resolver.md
   commands/go-build.md
   commands/go-review.md
-  commands/go-test.md
+  commands/go-tdd.md
 
 ---
 

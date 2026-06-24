@@ -1,0 +1,20 @@
+temporal-developer
+
+This plugin was ported from the temporal-developer Codex plugin and
+adapted for Claude Code (added .claude-plugin/plugin.json, Claude-compatible
+SKILL.md frontmatter, and the temporal command).
+
+Upstream source:
+  openai/plugins — plugins/temporal
+  https://github.com/openai/plugins/tree/main/plugins/temporal
+
+Files ported/adapted from this source:
+  skills/temporal-developer/SKILL.md
+  skills/temporal-developer/references/core/*
+  skills/temporal-developer/references/python/*
+  skills/temporal-developer/references/typescript/*
+  skills/temporal-developer/references/go/*
+  skills/temporal-developer/references/java/*
+
+This plugin is distributed under the MIT License; see LICENSE.
+Copyright (c) 2026 Temporal Technologies Inc.

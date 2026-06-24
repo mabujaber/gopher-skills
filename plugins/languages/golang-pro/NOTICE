@@ -16,7 +16,7 @@ Files derived from this source:
   agents/go-build-resolver.md
   commands/go-build.md
   commands/go-review.md
-  commands/go-test.md
+  commands/go-tdd.md
 
 ---
 
@@ -26,9 +26,9 @@ Copyright (c) 2026 Antigravity User
 
 Files derived from this source:
   skills/grpc-golang/SKILL.md
-  skills/grpc-golang/resources/implementation-playbook.md
+  skills/grpc-golang/references/implementation-playbook.md
   skills/go-playwright/SKILL.md
-  skills/go-playwright/resources/implementation-playbook.md
+  skills/go-playwright/references/implementation-playbook.md
   skills/go-rod-master/SKILL.md
   skills/go-rod-master/references/api-reference.md
   skills/go-rod-master/examples/*.go

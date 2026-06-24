@@ -106,7 +106,9 @@ When porting from `openai/plugins`:
 
 | Domain | When to use |
 |--------|-------------|
+| `languages/` | Core language development (Go idioms, testing, concurrency) |
 | `workflows/` | Durable execution, job orchestration, DAGs |
+| `infrastructure/` | Kubernetes-native & platform tooling |
 | `identity/` | Auth, OAuth2, SSO, permissions, authorization |
 | `messaging/` | Message brokers, pub/sub, event streaming |
 | `observability/` | Metrics, traces, logs, dashboards |
@@ -114,3 +116,4 @@ When porting from `openai/plugins`:
 | `media/` | Image/video/file processing |
 | `testing/` | Load testing, performance, chaos |
 | `feature-flags/` | Feature flag platforms and SDKs |
+| `storage/` | Object stores, blob stores, distributed file systems |

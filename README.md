@@ -47,6 +47,8 @@ plugins/
     k6/                     (planned)
   feature-flags/      Feature flag management
     flipt/                  (planned)
+  storage/            Distributed object & blob stores
+    seaweedfs/              (planned) S3-compatible distributed object store
 ```
 
 ## Installation

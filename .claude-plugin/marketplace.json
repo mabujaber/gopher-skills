@@ -5,13 +5,13 @@
     "url": "https://github.com/mabujaber"
   },
   "metadata": {
-    "description": "Claude Code plugins and skills for the Go-native ecosystem — Temporal, Kubernetes, Terraform, Vault, and more",
+    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro) and Temporal durable workflows.",
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
     "totalPlugins": 2,
     "skillsEnabled": 8,
-    "lastUpdated": "2026-06-11"
+    "lastUpdated": "2026-06-24"
   },
   "plugins": [
     {
@@ -35,8 +35,7 @@
         "name": "Temporal Technologies, Inc.",
         "url": "https://temporal.io"
       }
-    }
-  ,
+    },
     {
       "name": "golang-pro",
       "source": "./plugins/languages/golang-pro",

@@ -1,0 +1,13 @@
+{
+  "name": "openfga",
+  "version": "1.0.0",
+  "description": "Design, review, and refactor OpenFGA authorization models — types, relations, tuples, can_* permissions, usersets, and .fga.yaml tests.",
+  "license": "MIT",
+  "keywords": [
+    "go-ecosystem",
+    "openfga",
+    "authorization",
+    "rebac",
+    "zanzibar"
+  ]
+}

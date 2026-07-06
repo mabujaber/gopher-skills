@@ -9,9 +9,9 @@
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
-    "totalPlugins": 2,
-    "skillsEnabled": 8,
-    "lastUpdated": "2026-06-24"
+    "totalPlugins": 3,
+    "skillsEnabled": 9,
+    "lastUpdated": "2026-07-05"
   },
   "plugins": [
     {
@@ -56,6 +56,24 @@
       "author": {
         "name": "Moayad Abujaber",
         "url": "https://github.com/mabujaber"
+      }
+    },
+    {
+      "name": "flipt",
+      "source": "./plugins/feature-flags/flipt",
+      "description": "Manage Flipt feature flags — list, create, enable/disable, delete, manage variants, and configure rollout rules and segments for controlled rollouts via a bundled helper script.",
+      "version": "1.0.0",
+      "category": "feature-flags",
+      "keywords": [
+        "flipt",
+        "feature-flags",
+        "rollouts",
+        "experimentation",
+        "go-ecosystem"
+      ],
+      "author": {
+        "name": "Civitai",
+        "url": "https://civitai.com"
       }
     }
   ]

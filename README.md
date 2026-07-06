@@ -11,6 +11,7 @@ Claude Code plugins and skills for the **Go-native ecosystem** — tools built w
 |--------|----------|-----------|--------|
 | [temporal-developer](plugins/workflows/temporal-developer/) | workflows | Python, TypeScript, Go, Java | ✅ Available |
 | [golang-pro](plugins/languages/golang-pro/) | language | Go | ✅ Available |
+| [flipt](plugins/feature-flags/flipt/) | feature-flags | Go, Python, JS, Ruby, Java, .NET, REST | ✅ Available |
 
 ## Roadmap
 
@@ -46,7 +47,7 @@ plugins/
   testing/            Load & performance testing
     k6/                     (planned)
   feature-flags/      Feature flag management
-    flipt/                  (planned)
+    flipt/                  Self-hosted feature flag platform
   storage/            Distributed object & blob stores
     seaweedfs/              (planned) S3-compatible distributed object store
 ```

@@ -73,7 +73,7 @@ Planned plugins for gopher-skills, organized by domain.
 
 | Plugin | Tool | Description | SDKs |
 |--------|------|-------------|------|
-| `flipt` | [Flipt](https://flipt.io) | Self-hosted feature flag platform | Go, Python, JS, Ruby, Java, .NET, REST |
+| `flipt` ✅ | [Flipt](https://flipt.io) | Self-hosted feature flag platform | Go, Python, JS, Ruby, Java, .NET, REST |
 
 ## Storage & Object Stores
 

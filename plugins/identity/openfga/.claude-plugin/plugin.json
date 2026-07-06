@@ -1,0 +1,20 @@
+{
+  "name": "openfga",
+  "version": "1.0.0",
+  "description": "Design, review, and refactor OpenFGA authorization models — types, relations, tuples, can_* permissions, usersets, and .fga.yaml tests across JavaScript/TypeScript, Go, Python, Java, and .NET.",
+  "author": {
+    "name": "OpenFGA",
+    "url": "https://openfga.dev"
+  },
+  "repository": "https://github.com/mabujaber/gopher-skills",
+  "license": "MIT",
+  "keywords": [
+    "openfga",
+    "authorization",
+    "rebac",
+    "zanzibar",
+    "permissions",
+    "access-control",
+    "go-ecosystem"
+  ]
+}

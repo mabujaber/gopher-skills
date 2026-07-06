@@ -5,13 +5,13 @@
     "url": "https://github.com/mabujaber"
   },
   "metadata": {
-    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro) and Temporal durable workflows.",
+    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro), Temporal durable workflows, and OpenFGA fine-grained authorization.",
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
-    "totalPlugins": 2,
-    "skillsEnabled": 8,
-    "lastUpdated": "2026-06-24"
+    "totalPlugins": 3,
+    "skillsEnabled": 9,
+    "lastUpdated": "2026-07-05"
   },
   "plugins": [
     {
@@ -56,6 +56,26 @@
       "author": {
         "name": "Moayad Abujaber",
         "url": "https://github.com/mabujaber"
+      }
+    },
+    {
+      "name": "openfga",
+      "source": "./plugins/identity/openfga",
+      "description": "Design, review, and refactor OpenFGA authorization models — types, relations, tuples, can_* permissions, usersets, and .fga.yaml tests across JavaScript/TypeScript, Go, Python, Java, and .NET.",
+      "version": "1.0.0",
+      "category": "identity",
+      "keywords": [
+        "openfga",
+        "authorization",
+        "rebac",
+        "zanzibar",
+        "permissions",
+        "access-control",
+        "go-ecosystem"
+      ],
+      "author": {
+        "name": "OpenFGA",
+        "url": "https://openfga.dev"
       }
     }
   ]

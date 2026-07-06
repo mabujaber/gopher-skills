@@ -1,0 +1,22 @@
+openfga
+
+This plugin was ported from the OpenFGA agent-skills project and adapted for
+Claude Code (added .claude-plugin/plugin.json, package.json, and Claude-compatible
+SKILL.md frontmatter). The upstream skill content is licensed under Apache-2.0.
+
+Upstream source:
+  openfga/agent-skills — skills/openfga
+  https://github.com/openfga/agent-skills/tree/main/skills/openfga
+
+Files ported/adapted from this source:
+  skills/openfga/SKILL.md          (frontmatter adapted to Claude Code shape)
+  skills/openfga/references/*.md   (ported verbatim, 37 files)
+
+The upstream AGENTS.md compiled document and scripts/ build tooling were not
+ported; this plugin relies on SKILL.md plus the references/ tree directly.
+
+The ported content remains licensed under Apache-2.0 (https://www.apache.org/licenses/LICENSE-2.0)
+and is attributed to the OpenFGA authors. This plugin's scaffolding is distributed
+under the MIT License; see LICENSE.
+
+OpenFGA: https://openfga.dev

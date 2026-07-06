@@ -1,0 +1,12 @@
+{
+  "name": "flipt",
+  "version": "1.0.0",
+  "description": "Manage Flipt feature flags — list, create, enable/disable, variants, and rollout rules.",
+  "license": "MIT",
+  "keywords": [
+    "go-ecosystem",
+    "flipt",
+    "feature-flags",
+    "rollouts"
+  ]
+}

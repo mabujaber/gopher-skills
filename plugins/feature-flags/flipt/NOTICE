@@ -1,0 +1,37 @@
+flipt
+
+This plugin was ported from the Civitai Flipt feature-flag skill and adapted for the gopher-skills
+marketplace (Claude-compatible SKILL.md frontmatter; added .claude-plugin/plugin.json and
+package.json; genericized Civitai-specific defaults). The upstream content is licensed under
+Apache-2.0.
+
+Upstream source:
+  civitai/civitai — .claude/skills/flipt
+  https://github.com/civitai/civitai/tree/main/.claude/skills/flipt
+
+Files ported/adapted from this source:
+  skills/flipt/flipt.mjs        (ported with two genericizations: projectRoot now resolves to
+                                  process.cwd() instead of a hardcoded ../../.. Civitai path, and
+                                  the usage-comment paths updated; logic otherwise verbatim)
+  skills/flipt/.env.example     (defaults genericized: FLIPT_URL -> http://localhost:8080,
+                                  FLIPT_STATE_REPO -> a placeholder org)
+  skills/flipt/SKILL.md         (rewritten for a generic Flipt instance: Claude Code frontmatter,
+                                  a concepts overview, genericized command paths, and a
+                                  non-Civitai-specific GitOps section; command/option reference
+                                  preserved from upstream)
+
+Civitai-specific assumptions removed:
+  - Hardcoded FLIPT_URL default (flipt.civitai.com) -> localhost:8080
+  - Hardcoded GitOps state repo (civitai/flipt-state) -> generic <your-org>/flipt-state
+  - Env-file path relative to Civitai's repo layout -> process.cwd()
+
+Optional companion (not bundled):
+  flipt-io/mcp-server-flipt (Apache-2.0) — the official Flipt MCP server, which exposes the same
+  flag/segment/rule/rollout/evaluation surface to Claude Code. This plugin ships the script-based
+  helper instead of the MCP runtime.
+
+The ported content remains licensed under Apache-2.0
+(https://www.apache.org/licenses/LICENSE-2.0) and is attributed to Civitai. This plugin's
+scaffolding is distributed under the MIT License; see LICENSE.
+
+Flipt: https://flipt.io

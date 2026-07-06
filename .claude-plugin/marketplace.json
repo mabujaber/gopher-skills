@@ -5,7 +5,7 @@
     "url": "https://github.com/mabujaber"
   },
   "metadata": {
-    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro) and Temporal durable workflows.",
+    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro), Temporal durable workflows, and OpenFGA fine-grained authorization.",
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",

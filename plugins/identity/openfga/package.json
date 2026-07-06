@@ -9,5 +9,10 @@
     "authorization",
     "rebac",
     "zanzibar"
-  ]
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mabujaber/gopher-skills"
+  },
+  "author": "Moayad Abujaber"
 }

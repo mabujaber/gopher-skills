@@ -9,7 +9,7 @@ description: >
   model validate", or "FGA model test".
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash(fga:*)
 version: 1.0.0
-license: MIT
+license: "MIT (references: Apache-2.0)"
 tags:
   - go-ecosystem
   - openfga

@@ -50,6 +50,22 @@ Planned plugins for gopher-skills, organized by domain.
 |--------|------|-------------|------|
 | `signoz` | [SigNoz](https://signoz.io) | OpenTelemetry-native observability platform | OpenTelemetry SDKs (all languages) |
 
+### Grafana Observability Stack (LGTM) — Tier 1
+
+The Go-native "LGTM" stack (Loki, Grafana, Tempo, Metrics) plus continuous profiling and real-user
+monitoring. All server components are built in Go (Faro's RUM web SDK is TypeScript, backed by Go
+services). Marked Tier 1 — strong existing Claude-ecosystem skill coverage (official Grafana skills
+and MCP servers) makes these the next ports after the current batch lands.
+
+| Plugin | Tool | Description | SDKs |
+|--------|------|-------------|------|
+| `grafana` | [Grafana](https://grafana.com/oss/grafana/) | Visualization, dashboards, provisioning, alerting | Grafana HTTP API, SDKs, provisioning |
+| `prometheus` | [Prometheus](https://prometheus.io) | Metrics collection & scraping (CNCF, Go) | PromQL, client libraries (Go, Java, Python, ...) |
+| `loki` | [Loki](https://grafana.com/oss/loki/) | Log aggregation | LogQL, Promtail, clients |
+| `tempo` | [Tempo](https://grafana.com/oss/tempo/) | Distributed tracing (OpenTelemetry-native) | OpenTelemetry, TraceQL |
+| `pyroscope` | [Pyroscope](https://grafana.com/oss/pyroscope/) | Continuous profiling | Profiling agents (Go pprof, eBPF) |
+| `grafana-faro` | [Grafana Faro](https://grafana.com/docs/grafana-cloud/monitor-applications/frontend-observability/) | Real User Monitoring (RUM) | Faro Web SDK (JS/TS) |
+
 ## API Gateways & Reverse Proxies
 
 | Plugin | Tool | Description | SDKs |
@@ -91,16 +107,31 @@ Planned plugins for gopher-skills, organized by domain.
 
 ## Priority Order
 
-1. **NATS** — broadest language coverage (40+ SDKs), huge community
-2. **Ory/Kratos** — most-used Ory product, clear developer skill surface
-3. **Traefik** — widely deployed, complex config surface benefits from a skill
-4. **OpenFGA** — growing fast with AI authorization use cases
-5. **k6** — every team needs load testing
-6. **SigNoz** — OpenTelemetry-native, fills observability gap
-7. **Flipt** — self-hosted feature flags, strong SDK coverage
-8. **imgproxy** — niche but highly focused skill surface
-9. **Zitadel** — Ory alternative, overlapping audience
-10. **Caddy** — complements Traefik
-11. **Ory/Hydra, Keto, Oathkeeper** — after Kratos lands
-12. **Argo Workflows** — K8s-native container orchestration (infrastructure category)
-13. **SeaweedFS** — Go-native distributed storage; new Storage domain, S3-compatible surface
+### Tier 1 — Grafana observability stack (LGTM)
+
+The full Go-native observability stack: dashboards, metrics, logs, traces, profiles, and RUM.
+Strong existing Claude-ecosystem skill coverage (official Grafana skills + MCP servers), so these
+are the next ports after the current Tier-1 batch (OpenFGA, k6, SigNoz, NATS, Flipt) lands.
+
+1. **Grafana** — dashboards, visualization, provisioning, alerting
+2. **Prometheus** — metrics collection & PromQL (CNCF)
+3. **Loki** — log aggregation & LogQL
+4. **Tempo** — distributed tracing & TraceQL
+5. **Pyroscope** — continuous profiling
+6. **Grafana Faro** — real user monitoring (RUM)
+
+### Tier 2+ — remaining roadmap
+
+7. **NATS** — broadest language coverage (40+ SDKs), huge community
+8. **Ory/Kratos** — most-used Ory product, clear developer skill surface
+9. **Traefik** — widely deployed, complex config surface benefits from a skill
+10. **OpenFGA** — growing fast with AI authorization use cases
+11. **k6** — every team needs load testing
+12. **SigNoz** — OpenTelemetry-native, fills observability gap
+13. **Flipt** — self-hosted feature flags, strong SDK coverage
+14. **imgproxy** — niche but highly focused skill surface
+15. **Zitadel** — Ory alternative, overlapping audience
+16. **Caddy** — complements Traefik
+17. **Ory/Hydra, Keto, Oathkeeper** — after Kratos lands
+18. **Argo Workflows** — K8s-native container orchestration (infrastructure category)
+19. **SeaweedFS** — Go-native distributed storage; new Storage domain, S3-compatible surface

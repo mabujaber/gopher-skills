@@ -1,0 +1,13 @@
+{
+  "name": "k6",
+  "version": "1.0.0",
+  "description": "Write, debug, and run k6 load and performance tests, plus an end-to-end website performance-testing workflow.",
+  "license": "MIT",
+  "keywords": [
+    "go-ecosystem",
+    "k6",
+    "load-testing",
+    "performance-testing",
+    "grafana"
+  ]
+}

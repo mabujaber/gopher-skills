@@ -9,9 +9,9 @@
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
-    "totalPlugins": 2,
-    "skillsEnabled": 8,
-    "lastUpdated": "2026-06-24"
+    "totalPlugins": 3,
+    "skillsEnabled": 9,
+    "lastUpdated": "2026-07-05"
   },
   "plugins": [
     {
@@ -56,6 +56,26 @@
       "author": {
         "name": "Moayad Abujaber",
         "url": "https://github.com/mabujaber"
+      }
+    },
+    {
+      "name": "k6",
+      "source": "./plugins/testing/k6",
+      "description": "Write, debug, and run k6 load and performance tests in JavaScript/TypeScript — scripts, test types, thresholds, scenarios, executors, browser tests, result analysis, k6 Cloud, CI/CD, and an end-to-end website performance-testing workflow.",
+      "version": "1.0.0",
+      "category": "testing",
+      "keywords": [
+        "k6",
+        "load-testing",
+        "performance-testing",
+        "stress-testing",
+        "grafana",
+        "testing",
+        "go-ecosystem"
+      ],
+      "author": {
+        "name": "Grafana Labs",
+        "url": "https://grafana.com"
       }
     }
   ]

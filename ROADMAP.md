@@ -67,7 +67,7 @@ Planned plugins for gopher-skills, organized by domain.
 
 | Plugin | Tool | Description | SDKs |
 |--------|------|-------------|------|
-| `k6` | [k6](https://k6.io) | Developer-centric load testing tool | JavaScript test scripts, Go extensions |
+| `k6` ✅ | [k6](https://k6.io) | Developer-centric load testing tool | JavaScript test scripts, Go extensions |
 
 ## Feature Flags
 

@@ -1,0 +1,15 @@
+{
+  "name": "signoz",
+  "version": "1.0.0",
+  "description": "SigNoz observability — MCP setup, docs, queries, dashboards, and alerts via the SigNoz MCP server.",
+  "license": "MIT",
+  "keywords": [
+    "go-ecosystem",
+    "signoz",
+    "observability",
+    "opentelemetry",
+    "metrics",
+    "traces",
+    "logs"
+  ]
+}

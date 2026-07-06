@@ -9,9 +9,9 @@
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
-    "totalPlugins": 2,
-    "skillsEnabled": 8,
-    "lastUpdated": "2026-06-24"
+    "totalPlugins": 3,
+    "skillsEnabled": 20,
+    "lastUpdated": "2026-07-05"
   },
   "plugins": [
     {
@@ -56,6 +56,29 @@
       "author": {
         "name": "Moayad Abujaber",
         "url": "https://github.com/mabujaber"
+      }
+    },
+    {
+      "name": "signoz",
+      "source": "./plugins/observability/signoz",
+      "description": "SigNoz observability — MCP setup, docs search, metrics/log/trace queries, dashboards, alerts, and ClickHouse queries via the SigNoz MCP server.",
+      "version": "1.0.0",
+      "category": "observability",
+      "keywords": [
+        "signoz",
+        "observability",
+        "opentelemetry",
+        "metrics",
+        "traces",
+        "logs",
+        "dashboards",
+        "alerts",
+        "clickhouse",
+        "go-ecosystem"
+      ],
+      "author": {
+        "name": "SigNoz, Inc.",
+        "url": "https://signoz.io"
       }
     }
   ]

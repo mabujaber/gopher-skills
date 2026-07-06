@@ -11,6 +11,7 @@ Claude Code plugins and skills for the **Go-native ecosystem** — tools built w
 |--------|----------|-----------|--------|
 | [temporal-developer](plugins/workflows/temporal-developer/) | workflows | Python, TypeScript, Go, Java | ✅ Available |
 | [golang-pro](plugins/languages/golang-pro/) | language | Go | ✅ Available |
+| [signoz](plugins/observability/signoz/) | observability | OpenTelemetry SDKs (all languages) | ✅ Available |
 
 ## Roadmap
 
@@ -37,7 +38,7 @@ plugins/
   messaging/          Messaging & event streaming
     nats/                   (planned)
   observability/      Metrics, tracing & logs
-    signoz/                 (planned)
+    signoz/                 OpenTelemetry-native observability (metrics, traces, logs)
   gateway/            Reverse proxies & API gateways
     traefik/                (planned)
     caddy/                  (planned)

@@ -35,7 +35,7 @@ Planned plugins for gopher-skills, organized by domain.
 
 | Plugin | Tool | Description | SDKs |
 |--------|------|-------------|------|
-| `openfga` | [OpenFGA](https://openfga.dev) | Fine-grained authorization (CNCF) | Go, Node.js, .NET, Python, Java |
+| `openfga` ✅ | [OpenFGA](https://openfga.dev) | Fine-grained authorization (CNCF) | Go, Node.js, .NET, Python, Java |
 | `zitadel` | [Zitadel](https://zitadel.com) | Cloud-native identity platform | Go, REST/gRPC (any language) |
 
 ## Messaging & Event Streaming

@@ -1,0 +1,19 @@
+{
+  "name": "nats",
+  "version": "1.0.0",
+  "description": "Develop with NATS messaging — core pub/sub, request/reply, queue groups, JetStream streams/consumers, key-value and object stores, security, clustering, leaf nodes, server deployment/embedding, the Services (micro) framework, and the NATS CLI.",
+  "author": {
+    "name": "Kaustav Das Modak",
+    "url": "https://github.com/kaustavdm"
+  },
+  "repository": "https://github.com/mabujaber/gopher-skills",
+  "license": "MIT",
+  "keywords": [
+    "nats",
+    "messaging",
+    "jetstream",
+    "pub-sub",
+    "microservices",
+    "go-ecosystem"
+  ]
+}

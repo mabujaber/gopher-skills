@@ -1,0 +1,30 @@
+nats
+
+This plugin was ported from the kaustavdm/nats-skill project and adapted for the gopher-skills
+marketplace (Claude-compatible SKILL.md frontmatter; added .claude-plugin/plugin.json and
+package.json). The upstream content is licensed under MIT.
+
+Upstream source:
+  kaustavdm/nats-skill — skills/nats
+  https://github.com/kaustavdm/nats-skill/tree/main/skills/nats
+
+Files ported/adapted from this source:
+  skills/nats/SKILL.md                  (frontmatter adapted to Claude Code shape; body verbatim)
+  skills/nats/references/jetstream.md   (ported verbatim)
+  skills/nats/references/security.md    (ported verbatim)
+  skills/nats/references/server-deployment.md  (ported verbatim)
+
+Considered but intentionally NOT ported:
+  nats-io/nats.go CLAUDE.md  — the official Go client's contributor guide (dual-module build/test
+                               commands). It is contributor-facing and the skill above already
+                               covers application development; including it would add stale
+                               build/CI instructions of no value to plugin consumers.
+
+Optional companion (not bundled):
+  jesseobrien/nats-mcp (MIT) — a Go MCP server exposing 42 NATS tools (core, JetStream, KV,
+  object store). If installed and configured, it pairs naturally with this skill for live
+  operations; this plugin ships only guidance, not the MCP runtime.
+
+This plugin is distributed under the MIT License; see LICENSE.
+
+NATS: https://nats.io · https://docs.nats.io

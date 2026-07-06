@@ -42,7 +42,7 @@ Planned plugins for gopher-skills, organized by domain.
 
 | Plugin | Tool | Description | SDKs |
 |--------|------|-------------|------|
-| `nats` | [NATS](https://nats.io) | High-performance messaging & streaming | Go, Python, JS, Java, .NET, Rust, 40+ |
+| `nats` ✅ | [NATS](https://nats.io) | High-performance messaging & streaming | Go, Python, JS, Java, .NET, Rust, 40+ |
 
 ## Observability
 

@@ -11,6 +11,7 @@ Claude Code plugins and skills for the **Go-native ecosystem** — tools built w
 |--------|----------|-----------|--------|
 | [temporal-developer](plugins/workflows/temporal-developer/) | workflows | Python, TypeScript, Go, Java | ✅ Available |
 | [golang-pro](plugins/languages/golang-pro/) | language | Go | ✅ Available |
+| [nats](plugins/messaging/nats/) | messaging | Go, + 40 client libraries | ✅ Available |
 
 ## Roadmap
 
@@ -35,7 +36,7 @@ plugins/
     openfga/                (planned) Fine-grained authorization
     zitadel/                (planned) Cloud-native identity platform
   messaging/          Messaging & event streaming
-    nats/                   (planned)
+    nats/                   High-performance messaging & streaming (JetStream)
   observability/      Metrics, tracing & logs
     signoz/                 (planned)
   gateway/            Reverse proxies & API gateways

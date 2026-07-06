@@ -1,0 +1,13 @@
+{
+  "name": "nats",
+  "version": "1.0.0",
+  "description": "Develop with NATS messaging — core NATS, JetStream, KV/object store, security, clustering, and the NATS CLI.",
+  "license": "MIT",
+  "keywords": [
+    "go-ecosystem",
+    "nats",
+    "messaging",
+    "jetstream",
+    "pub-sub"
+  ]
+}

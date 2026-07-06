@@ -9,9 +9,9 @@
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
-    "totalPlugins": 2,
-    "skillsEnabled": 8,
-    "lastUpdated": "2026-06-24"
+    "totalPlugins": 3,
+    "skillsEnabled": 9,
+    "lastUpdated": "2026-07-05"
   },
   "plugins": [
     {
@@ -56,6 +56,25 @@
       "author": {
         "name": "Moayad Abujaber",
         "url": "https://github.com/mabujaber"
+      }
+    },
+    {
+      "name": "nats",
+      "source": "./plugins/messaging/nats",
+      "description": "Develop with NATS messaging — core pub/sub, request/reply, queue groups, JetStream streams/consumers, key-value and object stores, security, clustering, leaf nodes, server deployment/embedding, the Services (micro) framework, and the NATS CLI.",
+      "version": "1.0.0",
+      "category": "messaging",
+      "keywords": [
+        "nats",
+        "messaging",
+        "jetstream",
+        "pub-sub",
+        "microservices",
+        "go-ecosystem"
+      ],
+      "author": {
+        "name": "Kaustav Das Modak",
+        "url": "https://github.com/kaustavdm"
       }
     }
   ]

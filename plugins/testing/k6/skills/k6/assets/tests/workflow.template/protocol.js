@@ -1,6 +1,6 @@
 // k6 protocol-level functional test for workflow <WORKFLOW_PLACEHOLDER>.
 //
-// Hand-cleaned from from-har.js per the k6-perf-test-website skill's
+// Hand-cleaned from from-har.js per the k6 skill's
 // functional-tests.md procedure.
 //
 // Run:

@@ -13,7 +13,7 @@ recordings/scripts/wN-<short-name>.js          (Playwright -- source of truth)
 └── 5-step manual conversion        ⟶  tests/wN-<short-name>/browser.js   (final)
 ```
 
-See the `k6-perf-test-website` skill references:
+See the `k6` skill references:
 - `recording-with-playwright.md` for the recorder pattern
 - `functional-tests.md` for the 5-step Playwright → k6/browser
   conversion

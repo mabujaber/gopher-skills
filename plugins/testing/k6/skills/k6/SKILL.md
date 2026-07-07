@@ -9,7 +9,7 @@ description: >
   "soak test", "thresholds", "virtual users", "VUs", or "perf test my site".
 allowed-tools: Read, Write, Edit, Grep, Glob, Bash(k6:*), Bash(brew install k6), Bash(npm:*), Bash(npx:*), Bash(node:*)
 version: 1.0.0
-license: MIT
+license: "MIT (references: Apache-2.0)"
 tags:
   - go-ecosystem
   - k6
@@ -440,24 +440,29 @@ SLO-backed thresholds and a load-generator monitor — follow the opinionated wo
 **[`references/website-perf-workflow.md`](references/website-perf-workflow.md)**.
 
 The workflow ships reusable scaffolds under **`assets/`** (a project skeleton with per-test-type
-template scripts, a HAR recorder, `run-all.sh`, and a load-generator monitor sidecar). Copy them
-with `cp -R skills/k6/assets/. <target-dir>/` and fill in the workflow placeholders.
+template scripts, a HAR recorder, `run-all.sh`, and a load-generator monitor sidecar). The skill's
+`assets/` directory lives at `<SKILL_DIR>/assets/`, where `<SKILL_DIR>` is the absolute path to this
+skill's directory (your harness exposes this). Copy it into the target directory and fill in the
+workflow placeholders:
 
-Supporting references for that workflow:
-- `references/test-types.md` — definitions and defaults for smoke / average / stress / spike / soak / breakpoint
-- `references/slo-design.md` — global, per-endpoint, per-iteration, and Web Vitals thresholds
-- `references/hybrid-load-design.md` — protocol + single-browser-VU rationale
-- `references/functional-tests.md` — Playwright → k6/browser conversion procedure
-- `references/recording-with-playwright.md` — HAR capture and third-party filtering
-- `references/lg-monitoring.md` — why and how to monitor the load generator
-- `references/local-vs-cloud.md` — local vs Grafana Cloud k6 tradeoffs and cost model
-- `references/grafana-investigation.md` — correlating k6 runs with backend telemetry
-- `references/workflow-elicitation.md` — the workflow-discovery question script
-- `references/reporting.md` — final report template
-- `references/gotchas.md` — common pitfalls
+```bash
+cp -R "<SKILL_DIR>/assets/." "<target-dir>/"
+```
+
+If `cp -R` is blocked by sandbox permissions, copy files individually via your file-write tool.
 
 ## References
 
-- **[`references/test-types.md`](references/test-types.md)** — Load/stress/spike/soak/smoke/breakpoint definitions and examples
-- **[`references/website-perf-workflow.md`](references/website-perf-workflow.md)** — End-to-end website performance-testing workflow
+- **[`references/website-perf-workflow.md`](references/website-perf-workflow.md)** — end-to-end website performance-testing workflow (record → functional → hybrid load → report)
+- [`references/test-types.md`](references/test-types.md) — smoke / average / stress / spike / soak / breakpoint definitions and defaults
+- [`references/slo-design.md`](references/slo-design.md) — global, per-endpoint, per-iteration, and Web Vitals thresholds
+- [`references/hybrid-load-design.md`](references/hybrid-load-design.md) — protocol + single-browser-VU rationale
+- [`references/functional-tests.md`](references/functional-tests.md) — Playwright → k6/browser conversion procedure
+- [`references/recording-with-playwright.md`](references/recording-with-playwright.md) — HAR capture and third-party filtering
+- [`references/lg-monitoring.md`](references/lg-monitoring.md) — why and how to monitor the load generator
+- [`references/local-vs-cloud.md`](references/local-vs-cloud.md) — local vs Grafana Cloud k6 tradeoffs and cost model
+- [`references/grafana-investigation.md`](references/grafana-investigation.md) — correlating k6 runs with backend telemetry
+- [`references/workflow-elicitation.md`](references/workflow-elicitation.md) — the workflow-discovery question script
+- [`references/reporting.md`](references/reporting.md) — final report template
+- [`references/gotchas.md`](references/gotchas.md) — common pitfalls
 - k6 docs — https://grafana.com/docs/k6/latest/

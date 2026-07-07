@@ -4,7 +4,7 @@
 //   npx har-to-k6 recordings/har/<WORKFLOW_PLACEHOLDER>.har -o tests/<WORKFLOW_PLACEHOLDER>/from-har.js
 //
 // You should NOT edit this file by hand. Instead, hand-clean it into
-// `protocol.js` per the k6-perf-test-website skill's functional-tests.md
+// `protocol.js` per the k6 skill's functional-tests.md
 // procedure:
 //
 //   1. Move per-request User-Agent / sec-ch-ua-* to options.userAgent

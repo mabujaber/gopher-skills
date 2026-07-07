@@ -1,6 +1,6 @@
 # Performance tests
 
-Scaffolded by the `k6-perf-test-website` skill. End-to-end k6 perf
+Scaffolded by the `k6` skill. End-to-end k6 perf
 test suite using a hybrid protocol + browser approach.
 
 ## Layout

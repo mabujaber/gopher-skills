@@ -8,7 +8,7 @@
 //   - browser   : 1 constant VU × 14m (Web Vitals canary)
 //
 // Iteration body is identical to smoke.js -- duplication is intentional per the
-// k6-perf-test-website skill's hybrid-load-design.md. Update both files in lock-step
+// k6 skill's hybrid-load-design.md. Update both files in lock-step
 // when the workflow body changes.
 //
 // Run:

@@ -9,7 +9,7 @@
 //   - browser   : 1 constant VU × 20m (Web Vitals canary -- watch for regression)
 //
 // Iteration body is identical to smoke.js -- duplication is intentional per the
-// k6-perf-test-website skill's hybrid-load-design.md.
+// k6 skill's hybrid-load-design.md.
 //
 // Run:
 //   ./tools/run-with-monitor.sh                tests/<WORKFLOW_PLACEHOLDER>/stress.js

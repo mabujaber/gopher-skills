@@ -3,7 +3,7 @@
 #
 # Required for any test type beyond smoke, so we can tell whether the laptop
 # running k6 is the bottleneck rather than the server-under-test. See the
-# k6-perf-test-website skill's lg-monitoring.md.
+# k6 skill's lg-monitoring.md.
 #
 # Usage:
 #   tools/run-with-monitor.sh tests/wN-<short-name>/smoke.js

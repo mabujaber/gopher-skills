@@ -6,7 +6,7 @@
 #
 # Required because a CPU-pegged load generator silently throttles its own
 # request rate -- the server then looks slower than it really is. See the
-# k6-perf-test-website skill's lg-monitoring.md.
+# k6 skill's lg-monitoring.md.
 #
 # Usage (standalone):
 #   tools/lg-monitor.sh > /tmp/lg.csv &

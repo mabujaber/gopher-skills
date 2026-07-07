@@ -1,4 +1,4 @@
-# `k6-perf-test-website`
+# Website performance-testing workflow
 
 An end-to-end, opinionated workflow for performance-testing any
 public website with k6. The skill produces:

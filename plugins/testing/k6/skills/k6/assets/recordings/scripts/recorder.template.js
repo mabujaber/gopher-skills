@@ -10,7 +10,7 @@
 // Produces:
 //   recordings/har/<WORKFLOW_PLACEHOLDER>.har
 //
-// See the k6-perf-test-website skill's recording-with-playwright.md for design
+// See the k6 skill's recording-with-playwright.md for design
 // notes (third-party filter rationale, hydration sentinels, UA selection).
 
 const path = require('path');

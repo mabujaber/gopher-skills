@@ -1,7 +1,7 @@
 // k6-browser functional test for workflow <WORKFLOW_PLACEHOLDER>.
 //
 // Hand-converted from recordings/scripts/<WORKFLOW_PLACEHOLDER>.js per the
-// k6-perf-test-website skill's 5-step procedure in functional-tests.md. The
+// k6 skill's 5-step procedure in functional-tests.md. The
 // page-interaction body is structurally identical to the Playwright recorder;
 // only the framework scaffolding differs.
 //
@@ -33,7 +33,7 @@ export default async function () {
 
   try {
     // Step 1: open homepage. Wait for a post-hydration sentinel (an interactive
-    // element that only exists after JS has hydrated). See the k6-perf-test-website
+    // element that only exists after JS has hydrated). See the k6
     // skill's recording-with-playwright.md.
     await page.goto(BASE_URL, { waitUntil: 'load' });
 

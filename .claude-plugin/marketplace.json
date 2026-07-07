@@ -5,13 +5,13 @@
     "url": "https://github.com/mabujaber"
   },
   "metadata": {
-    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro) and Temporal durable workflows.",
+    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro), Temporal durable workflows, OpenFGA fine-grained authorization, k6 load and performance testing, and SigNoz observability.",
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
-    "totalPlugins": 3,
-    "skillsEnabled": 20,
-    "lastUpdated": "2026-07-05"
+    "totalPlugins": 5,
+    "skillsEnabled": 22,
+    "lastUpdated": "2026-07-07"
   },
   "plugins": [
     {
@@ -56,6 +56,46 @@
       "author": {
         "name": "Moayad Abujaber",
         "url": "https://github.com/mabujaber"
+      }
+    },
+    {
+      "name": "openfga",
+      "source": "./plugins/identity/openfga",
+      "description": "Design, review, and refactor OpenFGA authorization models — types, relations, tuples, can_* permissions, usersets, and .fga.yaml tests across JavaScript/TypeScript, Go, Python, Java, and .NET.",
+      "version": "1.0.0",
+      "category": "identity",
+      "keywords": [
+        "openfga",
+        "authorization",
+        "rebac",
+        "zanzibar",
+        "permissions",
+        "access-control",
+        "go-ecosystem"
+      ],
+      "author": {
+        "name": "OpenFGA",
+        "url": "https://openfga.dev"
+      }
+    },
+    {
+      "name": "k6",
+      "source": "./plugins/testing/k6",
+      "description": "Write, debug, and run k6 load and performance tests in JavaScript/TypeScript — scripts, test types, thresholds, scenarios, executors, browser tests, result analysis, k6 Cloud, CI/CD, and an end-to-end website performance-testing workflow.",
+      "version": "1.0.0",
+      "category": "testing",
+      "keywords": [
+        "k6",
+        "load-testing",
+        "performance-testing",
+        "stress-testing",
+        "grafana",
+        "testing",
+        "go-ecosystem"
+      ],
+      "author": {
+        "name": "Grafana Labs",
+        "url": "https://grafana.com"
       }
     },
     {

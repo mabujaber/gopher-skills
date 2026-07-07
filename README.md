@@ -12,6 +12,7 @@ Claude Code plugins and skills for the **Go-native ecosystem** — tools built w
 | [temporal-developer](plugins/workflows/temporal-developer/) | workflows | Python, TypeScript, Go, Java | ✅ Available |
 | [golang-pro](plugins/languages/golang-pro/) | language | Go | ✅ Available |
 | [openfga](plugins/identity/openfga/) | identity | JS/TS, Go, Python, Java, .NET | ✅ Available |
+| [k6](plugins/testing/k6/) | testing | JavaScript/TypeScript | ✅ Available |
 
 ## Roadmap
 
@@ -45,7 +46,7 @@ plugins/
   media/              Image & media processing
     imgproxy/               (planned)
   testing/            Load & performance testing
-    k6/                     (planned)
+    k6/                     Load & performance testing
   feature-flags/      Feature flag management
     flipt/                  (planned)
   storage/            Distributed object & blob stores

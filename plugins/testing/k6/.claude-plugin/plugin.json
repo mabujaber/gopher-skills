@@ -1,0 +1,20 @@
+{
+  "name": "k6",
+  "version": "1.0.0",
+  "description": "Write, debug, and run k6 load and performance tests in JavaScript/TypeScript — scripts, test types, thresholds, scenarios, executors, browser tests, result analysis, k6 Cloud, CI/CD, and an end-to-end website performance-testing workflow.",
+  "author": {
+    "name": "Grafana Labs",
+    "url": "https://grafana.com"
+  },
+  "repository": "https://github.com/mabujaber/gopher-skills",
+  "license": "MIT",
+  "keywords": [
+    "k6",
+    "load-testing",
+    "performance-testing",
+    "stress-testing",
+    "grafana",
+    "testing",
+    "go-ecosystem"
+  ]
+}

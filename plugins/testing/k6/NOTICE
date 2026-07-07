@@ -1,0 +1,29 @@
+k6
+
+This plugin was ported from the Grafana Labs k6 agent skills and adapted for Claude Code
+(added .claude-plugin/plugin.json, package.json, Claude-compatible SKILL.md frontmatter, and a
+consolidated references/ tree). The upstream content is licensed under Apache-2.0.
+
+Upstream source:
+  grafana/skills — skills/grafana-k6
+  https://github.com/grafana/skills/tree/main/skills/grafana-k6
+
+Files ported/adapted from this source:
+  skills/k6/SKILL.md                             (frontmatter adapted to Claude Code; dangling
+                                                   references/ links reconciled; a website-perf
+                                                   section and corrected reference index added)
+  skills/k6/references/website-perf-workflow.md  (ported from k6-perf-test-website/SKILL.md;
+                                                   skill frontmatter stripped)
+  skills/k6/references/*.md                      (11 files ported from k6-perf-test-website/references)
+  skills/k6/assets/**                            (ported from k6-perf-test-website/assets)
+
+Intentionally NOT ported:
+  skills/grafana-k6/k6-docs/     — k6-project documentation/contributor tooling (out of scope for users)
+  skills/grafana-k6/k6-manage/   — Grafana Cloud k6 management via the internal `gcx` CLI
+                                   (depends on tooling that is not generally available)
+
+The ported content remains licensed under Apache-2.0
+(https://www.apache.org/licenses/LICENSE-2.0) and is attributed to the Grafana Labs k6 team.
+This plugin's scaffolding is distributed under the MIT License; see LICENSE.
+
+k6: https://k6.io · https://grafana.com/docs/k6/latest/

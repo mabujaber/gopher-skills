@@ -5,13 +5,13 @@
     "url": "https://github.com/mabujaber"
   },
   "metadata": {
-    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro), Temporal durable workflows, and OpenFGA fine-grained authorization.",
+    "description": "Claude Code plugins and skills for the Go-native ecosystem — idiomatic Go development (golang-pro), Temporal durable workflows, OpenFGA fine-grained authorization, and k6 load and performance testing.",
     "version": "0.1.0",
     "homepage": "https://github.com/mabujaber/gopher-skills",
     "pluginRoot": "./plugins",
-    "totalPlugins": 3,
-    "skillsEnabled": 9,
-    "lastUpdated": "2026-07-05"
+    "totalPlugins": 4,
+    "skillsEnabled": 10,
+    "lastUpdated": "2026-07-06"
   },
   "plugins": [
     {
@@ -76,6 +76,26 @@
       "author": {
         "name": "OpenFGA",
         "url": "https://openfga.dev"
+      }
+    },
+    {
+      "name": "k6",
+      "source": "./plugins/testing/k6",
+      "description": "Write, debug, and run k6 load and performance tests in JavaScript/TypeScript — scripts, test types, thresholds, scenarios, executors, browser tests, result analysis, k6 Cloud, CI/CD, and an end-to-end website performance-testing workflow.",
+      "version": "1.0.0",
+      "category": "testing",
+      "keywords": [
+        "k6",
+        "load-testing",
+        "performance-testing",
+        "stress-testing",
+        "grafana",
+        "testing",
+        "go-ecosystem"
+      ],
+      "author": {
+        "name": "Grafana Labs",
+        "url": "https://grafana.com"
       }
     }
   ]

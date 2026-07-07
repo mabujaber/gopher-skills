@@ -48,7 +48,7 @@ Planned plugins for gopher-skills, organized by domain.
 
 | Plugin | Tool | Description | SDKs |
 |--------|------|-------------|------|
-| `signoz` | [SigNoz](https://signoz.io) | OpenTelemetry-native observability platform | OpenTelemetry SDKs (all languages) |
+| `signoz` ✅ | [SigNoz](https://signoz.io) | OpenTelemetry-native observability platform | OpenTelemetry SDKs (all languages) |
 
 ### Grafana Observability Stack (LGTM) — Tier 1
 

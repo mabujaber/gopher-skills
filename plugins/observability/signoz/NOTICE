@@ -1,0 +1,30 @@
+signoz
+
+This plugin was ported from the official SigNoz agent-skills plugin and adapted for the
+gopher-skills marketplace (repository URL and metadata adjusted; version normalized to 1.0.0;
+keywords added). The upstream content is licensed under MIT.
+
+Upstream source:
+  SigNoz/agent-skills — plugins/signoz
+  https://github.com/SigNoz/agent-skills/tree/main/plugins/signoz
+
+Files ported from this source:
+  .claude-plugin/plugin.json                  (adapted: repository -> gopher-skills, version 1.0.0,
+                                                keywords added; mcpServers + userConfig preserved)
+  .signoz_claude_mcp.json                     (MCP server config, ported verbatim)
+  skills/signoz-*/SKILL.md                    (12 skills, ported verbatim)
+  skills/signoz-*/references/**               (reference docs, ported verbatim)
+  skills/signoz-searching-docs/heuristics/**  (ported verbatim)
+
+Intentionally NOT ported:
+  skills/*/evals/                 — evaluation test fixtures (not runtime content)
+  hooks/                          — distribution-specific behavioral nudges
+  .codex-plugin/, .cursor-plugin/ — non-Claude plugin manifests
+  .mcp.json, .signoz_cursor_mcp.json — duplicate/placeholder MCP configs
+
+The skills invoke the SigNoz MCP server (tools prefixed `signoz_*`) configured via
+`userConfig.SIGNOZ_MCP_URL` — SigNoz Cloud or a self-hosted `/mcp` endpoint.
+
+This plugin is distributed under the MIT License; see LICENSE.
+
+SigNoz: https://signoz.io

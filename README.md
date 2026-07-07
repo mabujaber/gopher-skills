@@ -13,6 +13,7 @@ Claude Code plugins and skills for the **Go-native ecosystem** — tools built w
 | [golang-pro](plugins/languages/golang-pro/) | language | Go | ✅ Available |
 | [openfga](plugins/identity/openfga/) | identity | JS/TS, Go, Python, Java, .NET | ✅ Available |
 | [k6](plugins/testing/k6/) | testing | JavaScript/TypeScript | ✅ Available |
+| [signoz](plugins/observability/signoz/) | observability | OpenTelemetry SDKs (all languages) | ✅ Available |
 
 ## Roadmap
 
@@ -39,7 +40,7 @@ plugins/
   messaging/          Messaging & event streaming
     nats/                   (planned)
   observability/      Metrics, tracing & logs
-    signoz/                 (planned) OpenTelemetry-native observability
+    signoz/                 OpenTelemetry-native observability (metrics, traces, logs)
     grafana/                (planned) Grafana LGTM observability stack (Tier 1)
       grafana/              Dashboards & visualization
       prometheus/           Metrics & scraping (PromQL)

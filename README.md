@@ -41,6 +41,13 @@ plugins/
     nats/                   (planned)
   observability/      Metrics, tracing & logs
     signoz/                 OpenTelemetry-native observability (metrics, traces, logs)
+    grafana/                (planned) Grafana LGTM observability stack (Tier 1)
+      grafana/              Dashboards & visualization
+      prometheus/           Metrics & scraping (PromQL)
+      loki/                 Log aggregation (LogQL)
+      tempo/                Distributed tracing (TraceQL)
+      pyroscope/            Continuous profiling
+      faro/                 Real user monitoring (RUM)
   gateway/            Reverse proxies & API gateways
     traefik/                (planned)
     caddy/                  (planned)
